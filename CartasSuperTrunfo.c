@@ -8,6 +8,9 @@ int main() {
     float Area1, Area2;
     float PIB1, PIB2;
     int Pontos1, Pontos2;
+    float Densidade1, Densidade2;
+    float Percapita1, Percapita2;
+
     
     //cadastrando a primeira carta do jogo
     printf("Carta 1 \n");
@@ -32,6 +35,10 @@ int main() {
 
     printf("Insira os pontos turísticos da cidade: \n");
     scanf("%d", &Pontos1);
+    //Calculando a Densidade Populacional
+    Densidade1 = Populacao1 / Area1;
+    //Calculante PIB Per Capita
+    Percapita1 = PIB1 / Populacao1;
     getchar();
 
     //Cadastrando a segunda carta do jogo.
@@ -56,6 +63,10 @@ int main() {
 
     printf("Insira os pontos turísticos da cidade: \n");
     scanf("%d", &Pontos2);
+     //Calculando a Densidade Populacional
+     Densidade2 = Populacao2 / Area2;
+     //Calculante PIB Per Capita
+     Percapita2 = PIB2 / Populacao2;
     getchar();
 
 
@@ -66,18 +77,22 @@ int main() {
     printf("Código da carta: %s", Codigo1);
     printf("Nome da cidade: %s", Cidade1);
     printf("População da cidade: %d\n", Populacao1);
-    printf("Área em KM² da cidade: %d\n", Area1);
-    printf("PIB da cidade: %f\n", PIB1);
+    printf("Área em KM² da cidade: %.1f\n", Area1);
+    printf("PIB da cidade: %.2f\n", PIB1);
     printf("Numero de pontos turísticos: %d\n", Pontos1);
-    
+    printf("A Densidade populacional é: %.2f\n", Densidade1);
+    printf("Riqueza média por pessoa na cidade (PIB per capita): %.2f\n", Percapita1);
+
     printf("Dados da Carta 2 \n");
     printf("Nome do estado: %s", Estado2);
     printf("Código da carta: %s", Codigo2);
     printf("Nome da cidade: %s", Cidade2);
     printf("População da cidade: %d\n", Populacao2);
-    printf("Área em KM² da cidade: %d\n", Area2);
-    printf("PIB da cidade: %f\n", PIB2);
+    printf("Área em KM² da cidade: %.1f\n", Area2);
+    printf("PIB da cidade: %.2f\n", PIB2);
     printf("Numero de pontos turísticos: %d\n", Pontos2);
+    printf("A Densidade populacional é: %.2f\n", Densidade2);
+    printf("Riqueza média por pessoa na cidade (PIB per capita): %.2f\n", Percapita2);
 
     
 
